@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Os Quatro Elementos da Felicidade</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:system-ui,-apple-system,sans-serif;background:#f8f7f3;color:#1a1a18;padding:24px 16px}
+  h1{font-size:22px;font-weight:500;text-align:center;margin-bottom:6px}
+  .subtitle{font-size:14px;color:#5f5e5a;text-align:center;margin-bottom:24px}
+  .hub{display:flex;align-items:center;justify-content:center;margin:0 auto 24px;width:120px;height:120px;border-radius:50%;background:#eeeee8;border:0.5px solid #c0bfb8}
+  .hub-label{font-size:13px;font-weight:500;text-align:center;line-height:1.35;color:#1a1a18}
+  .tabs{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:20px}
+  .tab{padding:8px 18px;border-radius:99px;border:0.5px solid #c0bfb8;font-size:13px;font-weight:500;cursor:pointer;background:#fff;color:#5f5e5a;transition:all .15s}
+  .tab.active{color:#fff;border-color:transparent}
+  .tab-dopa.active{background:#7F77DD}
+  .tab-endo.active{background:#1D9E75}
+  .tab-sero.active{background:#EF9F27}
+  .tab-ocit.active{background:#D4537E}
+  .panel{display:none}
+  .panel.active{display:block}
+  .hormone-header{padding:18px 20px 14px;border-radius:12px 12px 0 0;border:0.5px solid;border-bottom:none}
+  .hormone-name{font-size:18px;font-weight:500;margin-bottom:3px}
+  .hormone-nick{font-size:12px;opacity:.8}
+  .bg-dopa{background:#EEEDFE;color:#3C3489;border-color:#AFA9EC}
+  .bg-endo{background:#E1F5EE;color:#085041;border-color:#5DCAA5}
+  .bg-sero{background:#FAEEDA;color:#633806;border-color:#EF9F27}
+  .bg-ocit{background:#FBEAF0;color:#72243E;border-color:#ED93B1}
+  .sections{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1px;background:#e0ded6;border:0.5px solid #e0ded6;border-radius:0 0 12px 12px;overflow:hidden;margin-bottom:20px}
+  .section{background:#fff;padding:16px}
+  .section-label{font-size:11px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;color:#888780;margin-bottom:10px}
+  .item{font-size:13px;color:#5f5e5a;line-height:1.55;padding:5px 0;border-bottom:0.5px solid #ebebE6;display:flex;align-items:flex-start;gap:8px}
+  .item:last-child{border-bottom:none}
+  .item-dot{display:inline-block;width:5px;height:5px;border-radius:50%;margin-top:6px;flex-shrink:0}
+  .c-dopa{background:#7F77DD}
+  .c-endo{background:#1D9E75}
+  .c-sero{background:#EF9F27}
+  .c-ocit{background:#D4537E}
+  .tip{margin-top:8px;padding:14px 16px;border-radius:8px;background:#f1efe8;font-size:12px;color:#888780}
+  .tip-btn{display:block;margin-top:8px;font-size:12px;cursor:pointer;background:none;border:none;color:#185fa5;padding:0;text-align:left}
+</style>
+</head>
+<body>
+<h1>Os Quatro Elementos da Felicidade</h1>
+<p class="subtitle">Conheça os hormônios do bem-estar e como ativá-los naturalmente</p>
+
+<div class="hub"><div class="hub-label">4 elementos<br>da felicidade</div></div>
+
+<div class="tabs">
+  <button class="tab tab-dopa active" onclick="show('dopa',this)">Dopamina</button>
+  <button class="tab tab-endo" onclick="show('endo',this)">Endorfina</button>
+  <button class="tab tab-sero" onclick="show('sero',this)">Serotonina</button>
+  <button class="tab tab-ocit" onclick="show('ocit',this)">Ocitocina</button>
+</div>
+
+<div id="panel-dopa" class="panel active">
+  <div class="hormone-header bg-dopa">
+    <div class="hormone-name">Dopamina</div>
+    <div class="hormone-nick">o hormônio da motivação e recompensa</div>
+  </div>
+  <div class="sections">
+    <div class="section">
+      <div class="section-label">Para que serve</div>
+      <div class="item"><span class="item-dot c-dopa"></span>Gera prazer ao atingir metas</div>
+      <div class="item"><span class="item-dot c-dopa"></span>Impulsiona a motivação para agir</div>
+      <div class="item"><span class="item-dot c-dopa"></span>Ativa o sistema de recompensa do cérebro</div>
+      <div class="item"><span class="item-dot c-dopa"></span>Ajuda na concentração e foco</div>
+    </div>
+    <div class="section">
+      <div class="section-label">Sintomas da falta</div>
+      <div class="item"><span class="item-dot c-dopa"></span>Falta de motivação, procrastinação</div>
+      <div class="item"><span class="item-dot c-dopa"></span>Sensação de que nada vale a pena</div>
+      <div class="item"><span class="item-dot c-dopa"></span>Dificuldade de concentrar</div>
+      <div class="item"><span class="item-dot c-dopa"></span>Tendência a vícios (buscar dopamina rápida)</div>
+    </div>
+    <div class="section">
+      <div class="section-label">Hábitos para aumentar</div>
+      <div class="item"><span class="item-dot c-dopa"></span>Dividir tarefas grandes em pequenas metas</div>
+      <div class="item"><span class="item-dot c-dopa"></span>Celebrar cada conquista, mesmo pequena</div>
+      <div class="item"><span class="item-dot c-dopa"></span>Criar listas e marcar o que concluiu</div>
+      <div class="item"><span class="item-dot c-dopa"></span>Exercício físico regular</div>
+      <div class="item"><span class="item-dot c-dopa"></span>Dieta rica em tirosina: ovos, nozes, banana</div>
+    </div>
+  </div>
+</div>
+
+<div id="panel-endo" class="panel">
+  <div class="hormone-header bg-endo">
+    <div class="hormone-name">Endorfina</div>
+    <div class="hormone-nick">o hormônio do alívio e euforia</div>
+  </div>
+  <div class="sections">
+    <div class="section">
+      <div class="section-label">Para que serve</div>
+      <div class="item"><span class="item-dot c-endo"></span>Reduz a percepção de dor física</div>
+      <div class="item"><span class="item-dot c-endo"></span>Gera euforia após esforço físico</div>
+      <div class="item"><span class="item-dot c-endo"></span>Alivia o estresse e a ansiedade</div>
+      <div class="item"><span class="item-dot c-endo"></span>Melhora o humor rapidamente</div>
+    </div>
+    <div class="section">
+      <div class="section-label">Sintomas da falta</div>
+      <div class="item"><span class="item-dot c-endo"></span>Baixa tolerância à dor</div>
+      <div class="item"><span class="item-dot c-endo"></span>Ansiedade e irritabilidade constante</div>
+      <div class="item"><span class="item-dot c-endo"></span>Dificuldade de relaxar</div>
+      <div class="item"><span class="item-dot c-endo"></span>Cansaço mesmo sem esforço</div>
+    </div>
+    <div class="section">
+      <div class="section-label">Hábitos para aumentar</div>
+      <div class="item"><span class="item-dot c-endo"></span>Exercício aeróbico: corrida, natação, ciclismo</div>
+      <div class="item"><span class="item-dot c-endo"></span>Gargalhadas genuínas (comédia, amigos)</div>
+      <div class="item"><span class="item-dot c-endo"></span>Música que você ama em volume alto</div>
+      <div class="item"><span class="item-dot c-endo"></span>Pimenta vermelha na alimentação</div>
+      <div class="item"><span class="item-dot c-endo"></span>Meditação e yoga</div>
+    </div>
+  </div>
+</div>
+
+<div id="panel-sero" class="panel">
+  <div class="hormone-header bg-sero">
+    <div class="hormone-name">Serotonina</div>
+    <div class="hormone-nick">o hormônio do bem-estar e equilíbrio</div>
+  </div>
+  <div class="sections">
+    <div class="section">
+      <div class="section-label">Para que serve</div>
+      <div class="item"><span class="item-dot c-sero"></span>Regula o humor e a estabilidade emocional</div>
+      <div class="item"><span class="item-dot c-sero"></span>Controla o sono e o apetite</div>
+      <div class="item"><span class="item-dot c-sero"></span>Dá sensação de pertencimento e valor</div>
+      <div class="item"><span class="item-dot c-sero"></span>Reduz ansiedade e depressão</div>
+    </div>
+    <div class="section">
+      <div class="section-label">Sintomas da falta</div>
+      <div class="item"><span class="item-dot c-sero"></span>Tristeza frequente sem motivo claro</div>
+      <div class="item"><span class="item-dot c-sero"></span>Insônia ou sono excessivo</div>
+      <div class="item"><span class="item-dot c-sero"></span>Compulsão por carboidratos e doces</div>
+      <div class="item"><span class="item-dot c-sero"></span>Sensação de solidão e baixa autoestima</div>
+    </div>
+    <div class="section">
+      <div class="section-label">Hábitos para aumentar</div>
+      <div class="item"><span class="item-dot c-sero"></span>Exposição ao sol pela manhã (15–30 min)</div>
+      <div class="item"><span class="item-dot c-sero"></span>Exercício físico regular</div>
+      <div class="item"><span class="item-dot c-sero"></span>Alimentação com triptofano: aveia, ovo, banana</div>
+      <div class="item"><span class="item-dot c-sero"></span>Recordar memórias positivas e conquistas</div>
+      <div class="item"><span class="item-dot c-sero"></span>Cuidar da saúde intestinal (probióticos)</div>
+    </div>
+  </div>
+</div>
+
+<div id="panel-ocit" class="panel">
+  <div class="hormone-header bg-ocit">
+    <div class="hormone-name">Ocitocina</div>
+    <div class="hormone-nick">o hormônio do amor e conexão</div>
+  </div>
+  <div class="sections">
+    <div class="section">
+      <div class="section-label">Para que serve</div>
+      <div class="item"><span class="item-dot c-ocit"></span>Cria vínculos afetivos profundos</div>
+      <div class="item"><span class="item-dot c-ocit"></span>Gera confiança e empatia</div>
+      <div class="item"><span class="item-dot c-ocit"></span>Reduz o estresse e o cortisol</div>
+      <div class="item"><span class="item-dot c-ocit"></span>Fortalece o sentido de pertencer</div>
+    </div>
+    <div class="section">
+      <div class="section-label">Sintomas da falta</div>
+      <div class="item"><span class="item-dot c-ocit"></span>Dificuldade de confiar nas pessoas</div>
+      <div class="item"><span class="item-dot c-ocit"></span>Isolamento e solidão crônica</div>
+      <div class="item"><span class="item-dot c-ocit"></span>Ansiedade em situações sociais</div>
+      <div class="item"><span class="item-dot c-ocit"></span>Sensação de desconexão emocional</div>
+    </div>
+    <div class="section">
+      <div class="section-label">Hábitos para aumentar</div>
+      <div class="item"><span class="item-dot c-ocit"></span>Abraços longos (20 segundos ou mais)</div>
+      <div class="item"><span class="item-dot c-ocit"></span>Fazer algo generoso por alguém</div>
+      <div class="item"><span class="item-dot c-ocit"></span>Passar tempo de qualidade com quem ama</div>
+      <div class="item"><span class="item-dot c-ocit"></span>Ter um animal de estimação</div>
+      <div class="item"><span class="item-dot c-ocit"></span>Conversas profundas e vulneráveis</div>
+    </div>
+  </div>
+</div>
+
+<div class="tip">
+  Dica de ouro: os quatro hormônios se complementam. Exercício físico, por exemplo, estimula dopamina, endorfina e serotonina ao mesmo tempo — é o hábito mais poderoso para o bem-estar.
+</div>
+
+<script>
+function show(id, btn) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('panel-' + id).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
+</body>
+</html>
